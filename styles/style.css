@@ -1,0 +1,228 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-primaria: #0D0000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #4886D9;
+    --cor-hover: #272727;
+
+    --fonte-primaria: "Oswald", sans-serif;
+    --fonte-secundaria: "Lato", sans-serif;
+}
+
+body{
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 15%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 5rem;
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    color: var(--cor-terciaria);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.apresentacao{
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.titulo-destaque{
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: 2.50rem;
+    font-family: var(--fonte-primaria);
+}
+
+.apresentacao__conteudo__subtitulo {
+    font-size: 2.5rem;
+    font-family: var(--fonte-primaria);
+}
+
+.apresentacao__conteudo__texto{
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+.apresentacao__links__subtitulo{
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.apresentacao__links__navegacao{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria);
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: 'Montserrat', sans-serif;
+}
+.apresentacao__links__navegacao:hover{
+    background-color: var(--cor-hover);
+}
+
+.curriculo__apresentacao {
+    display: flex;
+    flex-direction: row;
+}
+
+.apresentacao_imagem {
+    width: 50%;
+}
+
+.apresentacao__conteudo__form {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.rodape {
+    width: 100%;
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
+    text-align: center;
+    padding: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.apresentacao__conteudo__form {
+    margin-left: 25%;
+}
+form {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    font-family: var(--fonte-secundaria);
+    padding: 1rem;
+    border-radius: 8px;
+    max-width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 2px solid var(--cor-terciaria);
+    border-radius: 8px;
+    padding: 4rem;
+}
+
+legend {
+    font-family: var(--fonte-primaria);
+    font-size: 1.25rem;
+    color: var(--cor-terciaria);
+    padding: 0 10px;
+}
+
+label {
+    display: inline-block;
+    margin: 0.25rem 0;
+    font-weight: 600;
+}
+
+input[type="text"], input[type="email"], input[type="file"], input[type="time"], input[type="date"], select, textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--cor-terciaria);
+    border-radius: 4px;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 8px;
+    margin-bottom: 0.25rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--cor-terciaria);
+    color: var(--cor-secundaria);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 0.75rem;
+}
+
+button:hover {
+    background-color: var(--cor-hover);
+}
+
+@media (max-width: 768px) {
+    form {
+        padding: 0.5rem;
+    }
+
+    fieldset {
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+}

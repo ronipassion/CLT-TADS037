@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__link" href="index.html">Home</a>
+            <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
+            <a class="cabecalho__menu__link" href="curriculum.html">Currículo</a>
+            <a class="cabecalho__menu__link" href="contact.html">Orçamento</a>
+        </nav>
+    </header>
+    <main class="apresentacao">
+        <section class="apresentacao__conteudo">
+            <form class="apresentacao__conteudo__form" action="#" method="POST" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Formulário de Serviço</legend>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required><br><br>
+
+                    <label for="sobrenome">Sobrenome:</label>
+                    <input type="text" id="sobrenome" name="sobrenome" required><br><br>
+
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" name="telefone" required><br><br>
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="mensagem">Mensagem:</label><br>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br><br>
+
+                    <label for="lingua">Língua Aplicada no Serviço:</label>
+                    <select id="lingua" name="lingua" required>
+                        <option value="pt-br">Português (pt-br)</option>
+                        <option value="en">Inglês</option>
+                        <option value="es">Espanhol</option>
+                        <option value="fr">Francês</option>
+                    </select><br><br>
+
+                    <label for="prototipo">Upload de Protótipo (PDF, DOC, DOCX, JPEG, PNG):</label>
+                    <input type="file" id="prototipo" name="prototipo" accept=".pdf,.doc,.docx,.jpeg,.jpg,.png"
+                        required><br><br>
+
+                    <label for="linguagensPreferidas">Linguagens Preferidas:</label><br>
+                    <select id="linguagensPreferidas" name="linguagensPreferidas[]" multiple required>
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option value="csharp">C#</option>
+                    </select><br><br>
+
+                    <label>Tipo de Banco de Dados Recomendado:</label><br>
+                    <input type="radio" id="mysql" name="bancoDados" value="MySQL" required>
+                    <label for="mysql">MySQL | </label><br>
+                    <input type="radio" id="mongodb" name="bancoDados" value="MongoDB" required>
+                    <label for="mongodb">MongoDB | </label><br>
+                    <input type="radio" id="postgres" name="bancoDados" value="PostgreSQL" required>
+                    <label for="postgres">PostgreSQL | </label><br><br>
+
+                    <label for="turnoReuniao">Turno de Preferência para Reuniões:</label>
+                    <select id="turnoReuniao" name="turnoReuniao" required>
+                        <option value="manha">Manhã</option>
+                        <option value="tarde">Tarde</option>
+                        <option value="noite">Noite</option>
+                    </select><br><br>
+
+                    <label for="horarioReuniao">Melhor Horário para Reuniões:</label>
+                    <input type="time" id="horarioReuniao" name="horarioReuniao" required><br><br>
+
+                    <label for="dataEntrega">Previsão de Entrega:</label>
+                    <input type="date" id="dataEntrega" name="dataEntrega" required><br><br>
+
+                    <button type="reset">Limpar</button>
+                    <button type="submit">Enviar</button>
+                </fieldset>
+
+
+        </section>
+
+    </main>
+    <footer class="rodape">
+        <p>Desenvolvido por Roni Paixão</p>
+    </footer>
+</body>
+
+</html>
